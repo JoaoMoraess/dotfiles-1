@@ -167,6 +167,7 @@ class QuickToggle extends St.Button{
             // x_align: Clutter.ActorAlign.CENTER,
             // x_expand: true,
             can_focus: true,
+            x_expand: true
         });
 
         let box = new St.BoxLayout({
@@ -501,17 +502,21 @@ class QuickToggles extends St.BoxLayout{
         let row2 = new St.BoxLayout({ style_class: 'qt-container', });
         this.add_child(row1);
         this.add_child(row2);
+
         row1.add_child(this.wifi);
         row1.add_child(this.bluetooth);
-        row1.add_child(this.powerProfile);
-        row2.add_child(this.dnd);
-        row2.add_child(this.nightLight);
+        
         row2.add_child(this.darkMode);
+        row2.add_child(this.powerProfile);
+        row2.add_child(this.nightLight);
+        row2.add_child(this.dnd);
 
-        this.bluetooth.x_expand = true;
-        this.bluetooth.x_align = Clutter.ActorAlign.CENTER;
-        this.nightLight.x_expand = true;
-        this.nightLight.x_align = Clutter.ActorAlign.CENTER;
+        this.wifi.add_style_class_name('span1');
+        this.bluetooth.add_style_class_name('span1');
+        this.powerProfile.add_style_class_name('span2')
+        this.dnd.add_style_class_name('span2')
+        this.nightLight.add_style_class_name('span2')
+        this.darkMode.add_style_class_name('span2')
     }
     initialize(){
         if(!this.wifi.wrapper)
@@ -537,9 +542,8 @@ class MediaPlayer extends St.Bin{
     sync(){
         let player = this.media.getFavPlayer();
         if(player){
-            this.player = new Player(player._busName);
-            this.player.style_class = 'qt-container events-button';
-            this.player.remove_child(this.player.volumeBox);
+            this.player = player;
+            this.player.style_class = 'events-button';
             this.set_child(this.player);
             this.show();
         }else{
@@ -711,13 +715,6 @@ class Extension {
     }
 }
 
-let extension;
-
-var enable = () => {
-    extension = new Extension();
-    extension.enable();
-}
-var disable = () => {
-    extension.disable();
-    extension = null;
+function init(){
+    return new Extension();
 }

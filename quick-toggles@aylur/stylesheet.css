@@ -1,0 +1,55 @@
+
+.qt-stock-menu .popup-separator-menu-item-separator{
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+.qt-stock-menu .events-button{ margin: 0; }
+.qt-stock-menu{
+  width: 370px;
+  padding: 24px;
+  padding-bottom: 12px;
+}
+.qt-slider-container{ padding: 2px; }
+.qt-container{ spacing: 14px; }
+.qt-top-row{ spacing: 8px; }
+.qt-bot-row{ padding: 0 1em 0 0.6em; }
+.qt-user-icon{
+  margin: 4px;
+  min-width:  58px;
+  min-height: 58px;
+  border-radius: 99px;
+}
+.qt-btn{ border-radius: 99px; padding: 0;}
+.qt-btn StLabel{ margin-right: 8px; }
+.qt-btn StIcon{
+  margin: 8px;
+  icon-size: 30px;
+}
+.qt-toggle-btn{
+  padding: 10px 0;
+}
+.qt-toggle-btn StIcon{ icon-size: 2.4em; }
+.qt-toggle-btn StButton:hover{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.qt-toggle-btn.span1 StButton{ width: 150px;}
+.qt-toggle-btn.span2 StButton{ width: 60px;}
+.qt-notification-icon{ icon-size: 1em; }
+
+/* media */
+.qt-stock-menu .mp-media-cover{
+  padding: 2px;
+  border-radius: 0;
+}
+.qt-stock-menu .mp-media-cover StIcon{ icon-size: 100px; }
+.qt-stock-menu .mp-media-icon{ icon-size: 1em; }
+.qt-stock-menu .mp-player-icon{ icon-size: 1.4em; }
+.qt-stock-menu .mp-media-controls{ spacing: 6px; }
+.qt-stock-menu .mp-media-right-box{ padding: 8px; padding-right: 0; font-size: 1.2em; }
+.qt-stock-menu .mp-slider StIcon{ icon-size: 1.2em; }
+.qt-stock-menu .mp-container{ spacing: 8px; }
+.qt-stock-menu .message-media-control{ padding: 8px; margin: 0; }

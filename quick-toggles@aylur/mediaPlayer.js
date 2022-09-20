@@ -167,7 +167,7 @@ class Player extends St.BoxLayout{
         this.add_child(vbox);
         vbox.add_child(titleBox);
         vbox.add_child(controlsBox);
-        vbox.add_child(this.volumeBox);
+        // vbox.add_child(this.volumeBox);
     }
     _close() {
         this._mprisProxy.disconnectObject(this);
